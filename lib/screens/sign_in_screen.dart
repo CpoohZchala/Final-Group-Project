@@ -140,7 +140,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                               // Show a SnackBar with the error message
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   content: Text('Incorrect email or password'),
                                 ),
                               );

@@ -21,14 +21,21 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
     return Scaffold(
       appBar: AppBar(
-          title: Column(
-        children: [
-          Text(
-            'Edit Profile',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ],
-      )),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back), // Back arrow icon
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to ProfileScreen
+          },
+        ),
+        title: Column(
+          children: [
+            Text(
+              'Edit Profile',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+      ),
       body: _isLoading
           ? Center(child: CircularProgressIndicator())
           : Form(

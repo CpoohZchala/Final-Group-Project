@@ -83,7 +83,8 @@ class ProfileScreen extends StatelessWidget {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => EditProfileScreen()),
+                                  builder: (context) => EditProfileScreen(),
+                                  ),
                             );
                           },
                         ),
@@ -124,6 +125,7 @@ class ProfileScreen extends StatelessWidget {
                         );
                       },
                     ),
+                    
                   ],
                 ),
               ),

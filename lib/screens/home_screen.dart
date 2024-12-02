@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     FeedbackScreen(),
     NotificationsScreen(),
     CommunityScreen(),
+   
   ];
 
   @override
@@ -93,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.group),
             label: 'Community',
           ),
+           
         ],
       ),
     );
