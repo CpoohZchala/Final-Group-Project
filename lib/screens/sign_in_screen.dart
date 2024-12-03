@@ -11,15 +11,15 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final _formKey = GlobalKey<FormState>();
-  String email = '';
-  String password = '';
-  bool _passwordVisible = false;
+  final _formKey = GlobalKey<FormState>();    //form validation
+  String email = '';        //user entered Email
+  String password = '';     //user entered password
+  bool _passwordVisible = false;  //password visibility
   String? _errorMessage; // To hold the error message
 
   @override
   Widget build(BuildContext context) {
-    final authService = Provider.of<AuthService>(context);
+    final authService = Provider.of<AuthService>(context);      // AuthService for authentication
 
     return Scaffold(
       body: Center(
@@ -43,7 +43,7 @@ class _SignInScreenState extends State<SignInScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Form(
-                  key: _formKey,
+                  key: _formKey,  // Attach formKey to validate inputs
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [

@@ -59,6 +59,8 @@ class OnboardingPage2 extends StatelessWidget {
                 ),
                 child: const Text('Next'), // Label for the button
               ),
+           
+              
             ],
           ),
         ),

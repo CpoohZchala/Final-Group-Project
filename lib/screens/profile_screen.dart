@@ -36,11 +36,11 @@ class ProfileScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
                 child: Row(
                   children: [
-                    Text(
+                    const Text(
                       'CassavaGuard\n AI',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Image.asset('assets/assets/onboarding11.png', height: 50),
                   ],
                 ),
@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                           backgroundImage:
                               AssetImage('assets/assets/user_02.png'),
                         ),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +90,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 48),
+                    const SizedBox(height: 48),
                     buildProfileButton(
                       context,
                       Icons.lock,
@@ -103,7 +103,7 @@ class ProfileScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     buildProfileButton(
                       context,
                       Icons.delete,
@@ -111,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
                       onPressed: () =>
                           _showDeleteAccountDialog(context, authService),
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     buildProfileButton(
                       context,
                       Icons.exit_to_app,
@@ -151,9 +151,7 @@ class ProfileScreen extends StatelessWidget {
           textStyle: TextStyle(fontSize: 18, color: Colors.black),
         ),
         onPressed: onPressed ??
-            () {
-              // Implement functionality for other buttons
-            },
+            () { },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

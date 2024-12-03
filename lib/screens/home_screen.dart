@@ -10,6 +10,8 @@ import 'package:cassava_healthy_finder/screens/sign_in_screen.dart';
 import '../services/auth_services.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }

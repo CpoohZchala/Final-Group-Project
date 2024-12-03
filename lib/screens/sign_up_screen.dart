@@ -13,9 +13,9 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();  //form validation
   String name = '';
-  String email = '';
+  String email = '';                                   //User entered name,email,password,confirmpassword
   String password = '';
   String confirmPassword = '';
   bool _passwordVisible = false;
@@ -23,11 +23,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final authService = Provider.of<AuthService>(context);
+    final authService = Provider.of<AuthService>(context);             // AuthService for authentication
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 0,    // Removes the shadow below the AppBar
         backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
@@ -132,6 +132,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 onChanged: (value) => confirmPassword = value,
               ),
               SizedBox(height: 20),
+              
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 10, 49, 12),

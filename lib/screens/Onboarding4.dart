@@ -14,10 +14,6 @@ class OnboardingPage4 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent, // Transparent AppBar background
         elevation: 0, // No shadow under the AppBar
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black), // Back button icon
-          onPressed: onBackPressed, // Action for the back button
-        ),
       ),
       body: SafeArea(
         child: Padding(

@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;  //This is an instance of Firebase Authentication,
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance; //This is an instance of Firestore, the cloud database from Firebase
 
-  // Stream of auth state changes
+  // Stream of auth state changes(signing in, signing out, or account state changes)
   Stream<User?> get user => _auth.authStateChanges();
 
   // Get current user
@@ -33,7 +33,7 @@ class AuthService {
     }
   }
 
-  // Sign in method
+  // Sign in method => Call the createUserWithEmailAndPassword() method.
   Future<UserCredential?> signIn(String email, String password) async {
     try {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
@@ -47,11 +47,11 @@ class AuthService {
     }
   }
 
-  // Delete account method
+  // Delete account method => await user?.delete();
   Future<void> deleteAccount() async {
     try {
       await _firestore.collection('users').doc(_auth.currentUser?.uid).delete();
-      await _auth.currentUser?.delete();
+      await _auth.currentUser?.delete(); 
       print("Account was Deleted");
     } catch (e) {
       print("Error deleting account: $e");
